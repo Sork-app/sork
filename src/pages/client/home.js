@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import Hero from '../components/homepage/Hero'
+
+import Loader from '../../components/general/Loader.js'
+
 
 import { Poppins } from 'next/font/google'
 
@@ -12,7 +14,7 @@ export default function Home() {
     <main
       className={`${poppins.className}`}
     >
-      <Hero />
+      <Loader />
     </main>
   )
 }
