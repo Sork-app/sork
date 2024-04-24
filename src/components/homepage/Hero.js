@@ -1,4 +1,7 @@
 import React from 'react';
+import Link from 'next/link';
+
+
 
 const Hero = () => {
   return (
@@ -16,7 +19,7 @@ const Hero = () => {
           </div>
 
           <p className="py-6 text-xl">No nonsense startup communication.</p>
-          <button className="btn btn-primary">Open Sorkala</button>
+          <Link href="/client/home" className="btn btn-primary">Open Sorkala</Link>
         </div>
       </div>
     </div>

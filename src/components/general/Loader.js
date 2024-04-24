@@ -1,9 +1,12 @@
 import React from 'react';
 
 
+
+
 const Loader = () => {
 
-    
+
+
     return (
         <>
             <div className="hero min-h-screen text-center mx--auto bg-base-200">
