@@ -4,6 +4,8 @@ import { Bars3Icon, XMarkIcon as XMarkIconOutline } from '@heroicons/react/24/ou
 import { CheckIcon, XMarkIcon as XMarkIconMini } from '@heroicons/react/20/solid'
 import Header from '../components/general/Header'
 import Head from 'next/head'
+import { Poppins } from 'next/font/google'
+const poppins = Poppins({ subsets: ['latin'], weight: '400' })
 
 
 const navigation = [
@@ -188,7 +190,7 @@ export default function Example() {
     const [frequency, setFrequency] = useState(pricing.frequencies[0])
 
     return (
-        <div className="">
+        <div className={`${poppins.className}`}>
             <Head>
                 <title>Pricing</title>
                 <link rel="icon" href="/Sork_Logo_GrayBG.png" />
@@ -205,12 +207,10 @@ export default function Example() {
                         <div className="mx-auto max-w-7xl px-6 lg:px-8">
                             <div className="relative z-10">
                                 <h1 className="mx-auto max-w-4xl text-center text-5xl font-bold tracking-tight text-white">
-                                    Simple pricing, no commitment
+                                    Affordable pricing for teams of all sizes.
                                 </h1>
                                 <p className="mx-auto mt-4 max-w-2xl text-center text-lg leading-8 text-white/60">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit numquam eligendi quos odit doloribus
-                                    molestiae voluptatum quos odit doloribus.
-                                </p>
+                                Whether you're a bootstrapped startup or scaling up to your Series B, we offer tailored solutions to meet your needs.                                </p>
                                 <div className="mt-16 flex justify-center">
                                     <RadioGroup
                                         value={frequency}
@@ -562,107 +562,9 @@ export default function Example() {
                     </div>
                 </div>
 
-                {/* FAQ section */}
-                <div className="mx-auto mt-24 max-w-7xl divide-y divide-gray-900/10 px-6 sm:mt-56 lg:px-8">
-                    <h2 className="text-2xl font-bold leading-10 tracking-tight text-gray-900">Frequently asked questions</h2>
-                    <dl className="mt-10 space-y-8 divide-y divide-gray-900/10">
-                        {faqs.map((faq) => (
-                            <div key={faq.id} className="pt-8 lg:grid lg:grid-cols-12 lg:gap-8">
-                                <dt className="text-base font-semibold leading-7 text-gray-900 lg:col-span-5">{faq.question}</dt>
-                                <dd className="mt-4 lg:col-span-7 lg:mt-0">
-                                    <p className="text-base leading-7 text-gray-600">{faq.answer}</p>
-                                </dd>
-                            </div>
-                        ))}
-                    </dl>
-                </div>
+        
             </main>
 
-            {/* Footer */}
-            <footer className="mt-24 sm:mt-56" aria-labelledby="footer-heading">
-                <h2 id="footer-heading" className="sr-only">
-                    Footer
-                </h2>
-                <div className="mx-auto max-w-7xl px-6 pb-8 lg:px-8">
-                    <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-                        <div className="space-y-8">
-                            <img
-                                className="h-7"
-                                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                                alt="Company name"
-                            />
-                            <p className="text-sm leading-6 text-gray-600">
-                                Making the world a better place through constructing elegant hierarchies.
-                            </p>
-                            <div className="flex space-x-6">
-                                {footerNavigation.social.map((item) => (
-                                    <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
-                                        <span className="sr-only">{item.name}</span>
-                                        <item.icon className="h-6 w-6" aria-hidden="true" />
-                                    </a>
-                                ))}
-                            </div>
-                        </div>
-                        <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-                            <div className="md:grid md:grid-cols-2 md:gap-8">
-                                <div>
-                                    <h3 className="text-sm font-semibold leading-6 text-gray-900">Solutions</h3>
-                                    <ul role="list" className="mt-6 space-y-4">
-                                        {footerNavigation.solutions.map((item) => (
-                                            <li key={item.name}>
-                                                <a href={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
-                                                    {item.name}
-                                                </a>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                                <div className="mt-10 md:mt-0">
-                                    <h3 className="text-sm font-semibold leading-6 text-gray-900">Support</h3>
-                                    <ul role="list" className="mt-6 space-y-4">
-                                        {footerNavigation.support.map((item) => (
-                                            <li key={item.name}>
-                                                <a href={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
-                                                    {item.name}
-                                                </a>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className="md:grid md:grid-cols-2 md:gap-8">
-                                <div>
-                                    <h3 className="text-sm font-semibold leading-6 text-gray-900">Company</h3>
-                                    <ul role="list" className="mt-6 space-y-4">
-                                        {footerNavigation.company.map((item) => (
-                                            <li key={item.name}>
-                                                <a href={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
-                                                    {item.name}
-                                                </a>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                                <div className="mt-10 md:mt-0">
-                                    <h3 className="text-sm font-semibold leading-6 text-gray-900">Legal</h3>
-                                    <ul role="list" className="mt-6 space-y-4">
-                                        {footerNavigation.legal.map((item) => (
-                                            <li key={item.name}>
-                                                <a href={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
-                                                    {item.name}
-                                                </a>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
-                        <p className="text-xs leading-5 text-gray-500">&copy; 2020 Your Company, Inc. All rights reserved.</p>
-                    </div>
-                </div>
-            </footer>
         </div>
     )
 }

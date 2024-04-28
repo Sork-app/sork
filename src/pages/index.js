@@ -1,8 +1,10 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import Hero from '../components/homepage/Hero'
+import Info from '../components/homepage/Info'
 import Header from '../components/general/Header'
 import Head from "next/head";
+
 
 
 import { Poppins } from 'next/font/google'
@@ -24,6 +26,8 @@ export default function Home() {
       <Header />
 
       <Hero />
+
+      <Info />
     </main>
     </>
   )

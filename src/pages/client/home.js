@@ -135,7 +135,7 @@ export default function Home() {
                     onChange={handleInputChange}
                     onKeyPress={(e) => { if (e.key === 'Enter') { sendMessage(value); e.preventDefault(); setValue(""); messagesEndRef.current?.scrollIntoView({ behavior: "smooth" }); } }}
                     type="text"
-                    className="w-full bg-base-300 px-4 py-2 rounded-full mr-5"
+                    className="w-full bg-base-200 px-4 py-2 rounded-full mr-5"
                     placeholder="Type your message here..."
                   />
                   <button onClick={() => { sendMessage(value); setValue(""); messagesEndRef.current?.scrollIntoView({ behavior: "smooth" }); }} className="btn btn-primary rounded-full">

@@ -4,7 +4,8 @@ import Link from "next/link";
 const navigation = [
     { name: "Home", href: "/" },
     { name: "Pricing", href: "/pricing" },
-    { name: "Testimonial", href: "/" },
+    // { name: "Testimonials", href: "/" },
+    { name: "About", href: "/" },
   ];
 
 
