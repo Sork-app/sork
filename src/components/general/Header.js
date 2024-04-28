@@ -40,10 +40,10 @@ export function Header() {
           </div>
   
           <div className="lg:flex lg:flex-1 lg:justify-end gap-x-6">
-            <Link href="/" passHref>
+            <Link href="/client/login" passHref>
               <button className="text-white px-2 py-1 text-lg">Log in</button>
             </Link>
-            <Link href="/" passHref>
+            <Link href="/client/register" passHref>
               <button className="text-neutral-800 px-3 py-1 text-lg rounded-md bg-gradient-to-r from-primary to-secondary">Sign Up</button>
             </Link>
         

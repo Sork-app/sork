@@ -16,8 +16,8 @@ const Hero = () => {
           <p className="py-6 text-xl">No nonsense startup communication.</p>
           <div className="flex justify-center gap-x-4">
 
-            <Link href="/client/home" className="text-[#323232] font-bold btn btn-primary">Get Started</Link>
-            <Link href="/client/home" className="text-[#323232] font-bold btn btn-outline btn-primary">Go to your workspace</Link>
+            <Link href="/client/register" className="text-[#323232] font-bold btn btn-primary">Get Started</Link>
+            <Link href="/client/login" className="text-[#323232] font-bold btn btn-outline btn-primary">Go to your workspace</Link>
           </div>
 
         </div>

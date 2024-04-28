@@ -1,17 +1,8 @@
-import { Poppins } from 'next/font/google'
 import { useEffect, useState } from 'react';
+import Loader from '../../components/general/Loader.js';
+import { Poppins } from 'next/font/google';
 
-import Loader from '../../components/general/Loader.js'
-
-
-
-const poppins = Poppins({ subsets: ['latin'], weight: '400' })
-
-
-
-
-
-
+const poppins = Poppins({ subsets: ['latin'], weight: '400' });
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
@@ -20,7 +11,6 @@ export default function Home() {
   const handleInputChange = (event) => {
     setValue(event.target.value);
   };
-
 
   useEffect(() => {
     fetch('/api/hello')
@@ -34,8 +24,7 @@ export default function Home() {
         setIsLoading(false);
       });
   }, []);
-
-
+  
   return (
     <main
       className={`${poppins.className}`}
@@ -153,3 +142,4 @@ export default function Home() {
     </main>
   )
 }
+
