@@ -5,7 +5,7 @@ import Link from 'next/link';
 const Hero = () => {
   return (
 
-    <div className="hero min-h-screen bg-base-200">
+    <div className="hero min-h-screen bg-base-200 -mt-20">
       <div className="hero-content text-center">
         <div className="max-w-md">
 
@@ -14,7 +14,12 @@ const Hero = () => {
           </div>
 
           <p className="py-6 text-xl">No nonsense startup communication.</p>
-          <Link href="/client/home" className="btn btn-primary">Open Sorkala</Link>
+          <div className="flex justify-center gap-x-12">
+
+            <Link href="/client/home" className="text-[#323232] font-bold btn btn-primary">Get Started</Link>
+            <Link href="/client/home" className="text-[#323232] font-bold btn btn-secondary">Already a Member?</Link>
+          </div>
+
         </div>
       </div>
     </div>
