@@ -14,10 +14,10 @@ const Hero = () => {
           </div>
 
           <p className="py-6 text-xl">No nonsense startup communication.</p>
-          <div className="flex justify-center gap-x-12">
+          <div className="flex justify-center gap-x-4">
 
             <Link href="/client/home" className="text-[#323232] font-bold btn btn-primary">Get Started</Link>
-            <Link href="/client/home" className="text-[#323232] font-bold btn btn-secondary">Already a Member?</Link>
+            <Link href="/client/home" className="text-[#323232] font-bold btn btn-outline btn-primary">Go to your workspace</Link>
           </div>
 
         </div>

@@ -25,24 +25,21 @@ const pricing = {
             id: 'tier-starter',
             href: '#',
             featured: false,
-            description: 'All your essential business finances, taken care of.',
+            description: 'Perfect for bootstrapped startups.',
             price: { monthly: 'Free', annually: 'Free' },
-            mainFeatures: ['Basic invoicing', 'Easy to use accounting', 'Mutli-accounts'],
+            mainFeatures: ['TBA', 'TBA',     ],
         },
         {
             name: 'Enterprise Tier',
             id: 'tier-scale',
             href: '#',
             featured: true,
-            description: 'The best financial services for your thriving business.',
+            description: 'For teams past the startup stage.',
             price: { monthly: '$10', annually: '$120' },
             mainFeatures: [
-                'Advanced invoicing',
-                'Easy to use accounting',
-                'Mutli-accounts',
-                'Tax planning toolkit',
-                'VAT & VATMOSS filing',
-                'Free bank transfers',
+                'TBA',
+                'TBA',
+        
             ],
         },
         {
@@ -50,35 +47,24 @@ const pricing = {
             id: 'tier-growth',
             href: '#',
             featured: false,
-            description: 'Convenient features to take your business to the next level.',
+            description: 'For teams larger than 10.',
             price: { monthly: '$3', annually: '$36' },
-            mainFeatures: ['Basic invoicing', 'Easy to use accounting', 'Mutli-accounts', 'Tax planning toolkit'],
+            mainFeatures: ['TBA', 'TBA'],
         },
     ],
     sections: [
         {
-            name: 'Catered for business',
+            name: 'TBA',
             features: [
-                { name: 'Tax Savings', tiers: { Starter: true, Scale: true, Growth: true } },
-                { name: 'Easy to use accounting', tiers: { Starter: true, Scale: true, Growth: true } },
-                { name: 'Multi-accounts', tiers: { Starter: '3 accounts', Scale: 'Unlimited accounts', Growth: '7 accounts' } },
-                { name: 'Invoicing', tiers: { Starter: '3 invoices', Scale: 'Unlimited invoices', Growth: '10 invoices' } },
-                { name: 'Exclusive offers', tiers: { Starter: false, Scale: true, Growth: true } },
-                { name: '6 months free advisor', tiers: { Starter: false, Scale: true, Growth: true } },
-                { name: 'Mobile and web access', tiers: { Starter: false, Scale: true, Growth: false } },
+                { name: 'tba', tiers: { Starter: true, Scale: true, Growth: true } },
+
             ],
         },
         {
-            name: 'Other perks',
+            name: 'TBA',
             features: [
-                { name: '24/7 customer support', tiers: { Starter: true, Scale: true, Growth: true } },
-                { name: 'Instant notifications', tiers: { Starter: true, Scale: true, Growth: true } },
-                { name: 'Budgeting tools', tiers: { Starter: true, Scale: true, Growth: true } },
-                { name: 'Digital receipts', tiers: { Starter: true, Scale: true, Growth: true } },
-                { name: 'Pots to separate money', tiers: { Starter: false, Scale: true, Growth: true } },
-                { name: 'Free bank transfers', tiers: { Starter: false, Scale: true, Growth: false } },
-                { name: 'Business debit card', tiers: { Starter: false, Scale: true, Growth: false } },
-            ],
+                { name: 'TBA', tiers: { Starter: true, Scale: true, Growth: true } },
+    ],
         },
     ],
 }
@@ -292,7 +278,7 @@ export default function Example() {
                                                     aria-describedby={tier.id}
                                                     className={classNames(
                                                         tier.featured
-                                                            ? 'bg-primary shadow-sm hover:bg-secondary focus-visible:outline-indigo-600'
+                                                            ? 'bg-primary shadow-sm hover:bg-secondary focus-visible:outline-primary-600'
                                                             : 'bg-white/10 hover:bg-white/20 focus-visible:outline-white',
                                                         'rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2'
                                                     )}
