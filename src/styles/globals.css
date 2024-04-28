@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@keyframes dot {
+
+    0%, 20% {
+      content: '';
+    }
+    40% {
+      content: '.';
+
+    }
+    60% {
+      content: '..';
+      color:aliceblue;
+
+    }
+    80%, 100% {
+      content: '...';
+
+    }
+  }
+  
+  .loading-dots::after {
+    animation: dot 1.5s infinite;
+    content: '';
+  }

@@ -145,7 +145,7 @@ export default function LoginPage() {
               </div>
             </form>
 
-            <div>
+            <div className='hidden'>
               <div className="relative mt-10">
                 <div className="absolute inset-0 flex items-center" aria-hidden="true">
                   <div className="w-full border-t border-gray-200" />
