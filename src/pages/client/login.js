@@ -57,10 +57,10 @@ export default function LoginPage() {
 
     return (
         <main className={`flex items-center justify-center min-h-screen }`}>
-  <div className="flex min-h-full flex-1 flex-col justify-center py-12 sm:px-6 lg:px-8">
+  <div className="flex min-h-full flex-1 flex-col justify-center pt-12 pb-20 lg:px-8">
        
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-[480px]">
-          <div className="bg-base-200  py-12 shadow sm:rounded-sm border-t-4 border-primary px-10">
+          <div className="bg-base-200 pt-12 pb-16 shadow sm:rounded-sm border-t-4 border-primary px-10">
           <div className="flex">
        
           <h2 className=" mb-4  text-2xl font-semibold leading-9 tracking-tight text-white">
@@ -78,7 +78,7 @@ export default function LoginPage() {
         </div>
 
       
-            <form className="space-y-6" onSubmit={logIn}>
+            <form className="space-y-4" onSubmit={logIn}>
               <div>
                 <label htmlFor="email" className="block text-sm font-medium leading-6 text-white">
                   Email address
@@ -92,7 +92,7 @@ export default function LoginPage() {
                     type="email"
                     autoComplete="email"
                     required
-                    className="block w-full border-0 py-1.5 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 px-2"
+                    className="block text-white bg-base-100 border-none w-full border-0 py-1.5 text-black shadow-sm border-none ring-none sm:text-sm sm:leading-6 px-2"
                   />
                 </div>
               </div>
@@ -110,7 +110,7 @@ export default function LoginPage() {
                     type="password"
                     autoComplete="current-password"
                     required
-                    className="block w-full  border-0 py-1.5 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 px-2"
+                    className="block text-white bg-base-100 border-none w-full border-0 py-1.5 text-black shadow-sm border-none ring-none sm:text-sm sm:leading-6 px-2"
                   />
                 </div>
               </div>
@@ -135,7 +135,7 @@ export default function LoginPage() {
                 </div>
               </div>
 
-              <div>
+              <div >
                 <button
                   type="submit"
                   className="flex w-full justify-center  bg-primary px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
@@ -144,6 +144,10 @@ export default function LoginPage() {
                 </button>
               </div>
             </form>
+
+            <div className='mt-10 text-white bg-base-300 w-1/4 mx-auto text-center text-sm px-1 py-1'>
+              alpha 0.1
+            </div>
 
             <div className='hidden'>
               <div className="relative mt-10">
