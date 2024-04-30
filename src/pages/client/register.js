@@ -2,7 +2,7 @@ import { useRouter } from 'next/router'
 import { useState } from 'react'
 
 import { createClient } from '@/utils/supabase/component'
-
+import VerifyEmail from '@/components/auth/VerifyEmail';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -13,7 +13,7 @@ const poppins = Poppins({ subsets: ['latin'], weight: '400' })
 
 
 
-export default function RegisterPage() {
+export default function LoginPage() {
     const router = useRouter()
     const supabase = createClient()
 
@@ -21,28 +21,38 @@ export default function RegisterPage() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
-    async function logIn() {
-        event.preventDefault(); 
-        const { data, error } = await supabase.auth.signInWithPassword({ email, password })
+    // google flow
+    const [googleAuth, setGoogleAuth] = useState(false)
+    const [githubAuth, setGithubAuth] = useState(false)
+
+
+    async function signInWithGoogle() {
+        const { data, error } = await supabase.auth.signInWithOAuth({
+            provider: 'google'
+        });
         if (error) {
-            toast.error(error.message)
+            toast.error(error.message);
         } else {
             if (data) {
-                console.log(data)
-                toast.success('Logged in successfully')
+                console.log(data);
+                router.push('/client/home');
             }
         }
     }
 
     async function signUp() {
-        const { error } = await supabase.auth.signUp({ email, password })
+        event.preventDefault(); 
+        const { data, error } = await supabase.auth.signUp({ email, password })
         if (error) {
-            console.error(error)
+            toast.error(error.message)
+        } else {
+            if (data) {
+                console.log(data)
+                toast.success('Registered successfully')
+                router.push('/client/home');
+            }
         }
-        router.push('/')
     }
-
-
 
     return (
         <main className={`flex items-center justify-center min-h-screen ${poppins.className}`}>
@@ -55,13 +65,13 @@ export default function RegisterPage() {
             alt="Your Company"
           />
           <h2 className="mt-6 text-center text-2xl font-bold leading-9 tracking-tight text-white">
-            Get started with Sork
+            Register for your account
           </h2>
         </div>
 
-        <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-[480px]">
+        <div className="hidden mt-10 sm:mx-auto sm:w-full sm:max-w-[480px]">
           <div className="bg-base-200 px-6 py-12 shadow sm:rounded-lg sm:px-12">
-            <form className="space-y-6" onSubmit={logIn}>
+            <form className="space-y-6 " onSubmit={signUp}>
               <div>
                 <label htmlFor="email" className="block text-sm font-medium leading-6 text-white">
                   Email address
@@ -123,7 +133,7 @@ export default function RegisterPage() {
                   type="submit"
                   className="flex w-full justify-center rounded-md bg-primary px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                 >
-                  Sign in
+                  Register
                 </button>
               </div>
             </form>
@@ -140,8 +150,8 @@ export default function RegisterPage() {
 
               <div className="mt-6 grid grid-cols-2 gap-4">
                 <a
-                  href="#"
-                  className="flex w-full items-center justify-center gap-3 rounded-md bg-base-200 px-3 py-2 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-gray-300  focus-visible:ring-transparent"
+                  onClick={signInWithGoogle}
+                  className="cursor-pointer flex w-full items-center justify-center gap-3 rounded-md bg-base-200 px-3 py-2 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-gray-300  focus-visible:ring-transparent"
                 >
                   <svg className="h-5 w-5" aria-hidden="true" viewBox="0 0 24 24">
                     <path
@@ -179,10 +189,14 @@ export default function RegisterPage() {
                 </a>
               </div>
             </div>
+
+      
           </div>
 
 
         </div>
+
+        <VerifyEmail />  
 
         <ToastContainer />
 
