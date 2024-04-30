@@ -1,4 +1,4 @@
-const mongoose = require('../utils/db.js'); // Adjust the path as necessary
+const mongoose = require('../../utils/db.js');
 const { Schema } = mongoose;
 
 const organizationSchema = new Schema({
