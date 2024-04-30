@@ -176,7 +176,7 @@ export default function Example() {
     const [frequency, setFrequency] = useState(pricing.frequencies[0])
 
     return (
-        <div className={`${poppins.className}`}>
+        <div className={`}`}>
             <Head>
                 <title>Pricing</title>
                 <link rel="icon" href="/Sork_Logo_GrayBG.png" />

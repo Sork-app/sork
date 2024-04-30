@@ -27,7 +27,7 @@ export default function Home() {
   
   return (
     <main
-      className={`${poppins.className}`}
+      className={`}`}
     >
       {isLoading && <Loader />}
 

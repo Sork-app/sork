@@ -55,8 +55,8 @@ export default function LoginPage() {
     }
 
     return (
-        <main className={`flex items-center justify-center min-h-screen ${poppins.className}`}>
-  <div className="flex min-h-full flex-1 flex-col justify-center py-12 sm:px-6 lg:px-8">
+        <main className={`flex items-center justify-center min-h-screen }`}>
+  <div className="hidden flex min-h-full flex-1 flex-col justify-center py-12 sm:px-6 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-md">
           <img
             onClick={() => router.push('/')}
@@ -196,11 +196,12 @@ export default function LoginPage() {
 
         </div>
 
-        <VerifyEmail />  
-
-        <ToastContainer />
 
       </div>
+
+      <VerifyEmail />  
+
+<ToastContainer />
         </main>
     )
 }
