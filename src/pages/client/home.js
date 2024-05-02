@@ -5,7 +5,7 @@ import { Poppins } from 'next/font/google';
 const poppins = Poppins({ subsets: ['latin'], weight: '400' });
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [value, setValue] = useState("");
 
   const handleInputChange = (event) => {

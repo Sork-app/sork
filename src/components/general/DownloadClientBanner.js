@@ -19,6 +19,7 @@ export default function DownloadClientBanner() {
             </p>
             <div className="flex flex-none items-center gap-x-5">
                 <button
+                    onClick={() => window.location.href = "https://github.com/Sork-app/sork/releases/download/v0.0.1-alpha/client-darwin-arm64.zip"}
                     type="button"
                     className="rounded-md bg-gray-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
                 >
