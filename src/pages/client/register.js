@@ -56,7 +56,7 @@ export default function LoginPage() {
 
     return (
         <main className={`flex items-center justify-center min-h-screen }`}>
-  <div className="hidden flex min-h-full flex-1 flex-col justify-center py-12 sm:px-6 lg:px-8">
+  <div className=" flex min-h-full flex-1 flex-col justify-center py-12 sm:px-6 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-md">
           <img
             onClick={() => router.push('/')}
@@ -69,7 +69,7 @@ export default function LoginPage() {
           </h2>
         </div>
 
-        <div className="hidden mt-10 sm:mx-auto sm:w-full sm:max-w-[480px]">
+        <div className=" mt-10 sm:mx-auto sm:w-full sm:max-w-[480px]">
           <div className="bg-base-200 px-6 py-12 shadow sm:rounded-lg sm:px-12">
             <form className="space-y-6 " onSubmit={signUp}>
               <div>
@@ -199,7 +199,7 @@ export default function LoginPage() {
 
       </div>
 
-      <VerifyEmail />  
+
 
 <ToastContainer />
         </main>
