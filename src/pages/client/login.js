@@ -7,6 +7,7 @@ import { createClient } from '@/utils/supabase/component'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Poppins } from 'next/font/google'
+import DownloadClientBanner from "@/components/general/DownloadClientBanner";
 
 const poppins = Poppins({ subsets: ['latin'], weight: '400' })
 
@@ -145,10 +146,6 @@ export default function LoginPage() {
               </div>
             </form>
 
-            <div className='mt-10 text-white bg-base-300 w-1/4 mx-auto text-center text-sm px-1 py-1'>
-              alpha 0.1
-            </div>
-
             <div className='hidden'>
               <div className="relative mt-10">
                 <div className="absolute inset-0 flex items-center" aria-hidden="true">
@@ -202,7 +199,7 @@ export default function LoginPage() {
             </div>
           </div>
 
-
+            <DownloadClientBanner/>
         </div>
 
         <ToastContainer />
