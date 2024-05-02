@@ -1,0 +1,3 @@
+[submodule "sork-client"]
+	path = sork-client
+	url = https://github.com/Sork-app/sork-client.git
